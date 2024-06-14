@@ -1,5 +1,5 @@
-const DayGR = ['Κυριακή', 'Δευτέρα', 'Τρίτη', 'Τετάρτη', 'Πέμπτη', 'Παρασκευή', 'Σάββατο']
-const monthGR= ['Ιανουαρίου', 'Φεβρουαρίου', 'Μαρτίου', 'Απριλίου', 'Μαίου', 'Ιουνίου', 'Ιουλίου', 'Αυγούστου', 'Σεπτεμβρίου', 'Οκτωβρίου', 'Νοεμβρίου', 'Δεκεμβρίου']
+const daysGR = ['Κυριακή', 'Δευτέρα', 'Τρίτη', 'Τετάρτη', 'Πέμπτη', 'Παρασκευή', 'Σάββατο']
+const monthsGR= ['Ιανουαρίου', 'Φεβρουαρίου', 'Μαρτίου', 'Απριλίου', 'Μαίου', 'Ιουνίου', 'Ιουλίου', 'Αυγούστου', 'Σεπτεμβρίου', 'Οκτωβρίου', 'Νοεμβρίου', 'Δεκεμβρίου']
 
 window.addEventListener('DOMContentLoaded', function() {
 
@@ -28,7 +28,7 @@ function printGRDate() {
     const seconds = currentDate.getSeconds()
 
     const dayStr = daysGR[day]
-    const monthStr = monthGR[month]
+    const monthStr = monthsGR[month]
 
     let dateStr = `${dayStr}, ${date}  ${monthStr}  ${year}`
     let timeStr = `${(hours < 10) ? '0' : ''}${hours}:
