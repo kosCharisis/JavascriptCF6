@@ -1,5 +1,5 @@
 const daysGR = ['Κυριακή', 'Δευτέρα', 'Τρίτη', 'Τετάρτη', 'Πέμπτη', 'Παρασκευή', 'Σάββατο']
-const monthsGR= ['Ιανουαρίου', 'Φεβρουαρίου', 'Μαρτίου', 'Απριλίου', 'Μαίου', 'Ιουνίου', 'Ιουλίου', 'Αυγούστου', 'Σεπτεμβρίου', 'Οκτωβρίου', 'Νοεμβρίου', 'Δεκεμβρίου']
+const monthsGR = ['Ιανουαρίου', 'Φεβρουαρίου', 'Μαρτίου', 'Απριλίου', 'Μαΐου', 'Ιουνίου', 'Ιουλίου', 'Αυγούστου', 'Σεπτεμβρίου', 'Οκτωβρίου', 'Νοεμβρίου', 'Δεκεμβρίου']
 let noteId = 0
 
 window.addEventListener('DOMContentLoaded', function() {
@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', function() {
     })
 
     this.document.querySelector('#inputNote').addEventListener('keyup', function(e) {
-        if (e.Key === 'Enter') {
+        if (e.key === 'Enter') {
             onInsertHandler(this.value.trim())
         }
     })
@@ -31,18 +31,17 @@ function printGRDate() {
     const dayStr = daysGR[day]
     const monthStr = monthsGR[month]
 
-    let dateStr = `${dayStr}, ${date}  ${monthStr}  ${year}`
-    let timeStr = `${(hours < 10) ? '0' : ''}${hours}:
-                   ${(minutes < 10) ? '0' : ''}${minutes}:
-                   ${(seconds < 10) ? '0' : ''}${seconds}`
+    let dateStr = `${dayStr}, ${date} ${monthStr} ${year}`
+    let timeStr = `${(hours < 10) ? '0' : ''}${hours}:${(minutes < 10) ? '0' : ''}${minutes}:${(seconds < 10) ? '0' : ''}${seconds}`
 
     document.querySelector('#dateTxt').innerHTML = dateStr + '<br>' + timeStr
 }
 
 /**
- * Controller for insert button clicked.
+ * Handler for insert button clicked
+ * or Enter pressed.
  * 
- * @param {String} data 
+ * @param {string} data 
  */
 function onInsertHandler(data) {
     insertNote(data)
@@ -61,7 +60,7 @@ function insertNote(note) {
         strikeThrough(clone.querySelector('.note-text'))
     })
 
-    clone.querySelector('.node_del-btn').addEventListener('click', function() {
+    clone.querySelector('.note_del-btn').addEventListener('click', function() {
         deleteNote(this.parentNode)
     })
 
@@ -85,11 +84,3 @@ function deleteNote(note) {
 function reset() {
     document.querySelector('#inputNote').value = ''
 }
-
-
-
-
-
-
-
-
