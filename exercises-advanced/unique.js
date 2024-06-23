@@ -1,4 +1,4 @@
-const arr = [1, 2,"a", 2, 3, 3, , , ,"a", "a","g"];
+const arr = [1, 2,"a", 2, 3, 3, , , ,"a", "a","g"]
 
 function removeDuplicates(index) {
     let pure = [];
@@ -7,6 +7,6 @@ function removeDuplicates(index) {
             pure.push(element)
         }
     });
-    return pure;
+    return pure
 }
-console.log(removeDuplicates(arr));
+console.log(removeDuplicates(arr))
