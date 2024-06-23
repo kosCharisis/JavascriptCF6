@@ -5,4 +5,6 @@ const user = {
 }
 
 const userJSONString = JSON.stringify(user)
+console.log(userJSONString)
 const userJSobj = JSON.parse(userJSONString)
+console.log(userJSobj)
