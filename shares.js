@@ -7,3 +7,5 @@ function addStock(portfolio, stock, shares) {
 
 addStock(portfolio, stocks.Microsoft, 90)
 addStock(portfolio, stocks.Apple, 1000)
+
+console.log(portfolio)
