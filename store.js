@@ -19,6 +19,7 @@ const store = `[{"id": "pro43vog",
 
 function fetchProducts() {
     const products = JSON.parse(store)
+    console.log(products)
     return products
 }
 
@@ -30,5 +31,6 @@ function displayProducts(products) {
     })
 }
 
-const fetchedProducts = fetchProducts()
+const fetchedProducts = fetchProducts
+()
 displayProducts(fetchedProducts)
