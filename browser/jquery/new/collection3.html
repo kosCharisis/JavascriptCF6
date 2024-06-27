@@ -10,16 +10,22 @@
     <div>
         <ul>
             <li>Java</li>
-            <li>C#</li>
+            <li id="link">C#</li>
             <li>Javascript</li>
         </ul>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <script>
-        $('li').each(function(index) {
-            console.log(index + ", " + $(this).text())
-        })
+       $(function() {
+            $('li').each(function(index, el) {
+                if ($(el).is('#link')) {
+                    $(el).append('<a class="cf-link">Visit us</a>')
+                    $('.cf-link').attr('href', 'https://codingfactory.aueb.gr/el')
+                    return false   //break
+                }
+            })
+       })
     </script>
 </body>
 </html>
